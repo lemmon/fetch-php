@@ -1,5 +1,5 @@
 {
-    "name": "lemmon/router",
+    "name": "lemmon/fetch",
     "type": "library",
     "description": "JavaScript's fetch() implementation on top of Guzzle",
     "keywords": ["framework", "http", "rest", "web service", "curl", "client", "HTTP client"],

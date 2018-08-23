@@ -23,7 +23,7 @@
           "src/fetch.php"
         ],
         "psr-4": {
-            "Fetch\\": "src/"
+            "Fetch\\": "src/Fetch/"
         }
     }
 }

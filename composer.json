@@ -1,0 +1,29 @@
+{
+    "name": "lemmon/router",
+    "type": "library",
+    "description": "JavaScript's fetch() implementation on top of Guzzle",
+    "keywords": ["framework", "http", "rest", "web service", "curl", "client", "HTTP client"],
+    "license": "MIT",
+    "authors": [
+        {
+           "name": "Jakub Pelák",
+           "homepage": "https://github.com/lemmon"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.0"
+    },
+    "autoload": {
+        "files": [
+          "src/Fetch/fetch.php",
+          "src/fetch.php"
+        ],
+        "psr-4": {
+            "Fetch\\": "src/"
+        }
+    }
+}

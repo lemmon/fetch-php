@@ -4,15 +4,20 @@ namespace Fetch;
 
 use GuzzleHttp\Client;
 
-function fetch(string $input, array $init = NULL)
+function fetch(string $resource, ?array $init = NULL)
 {
   $client = new Client;
-  $response = $client->request(
-    $init['method'] ?? 'GET',
-    $input,
-    $init ? array_diff_key($init, [
-      'method' => FALSE,
-    ]) : []
-  );
-  return new Response($response);
+  try {
+    $response = $client->request(
+      $init['method'] ?? 'GET',
+      $resource,
+      $init ? array_diff_key($init, [
+        'method' => FALSE,
+      ]) : []
+    );
+  } catch (\Exception $e) {
+    $response = $e->getResponse();
+  } finally {
+    return new Response($response);
+  }
 }

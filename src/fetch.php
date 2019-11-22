@@ -1,8 +1,8 @@
 <?php
 
 if (!function_exists('fetch')) {
-  function fetch(string $input, array $init = NULL)
+  function fetch(string $resource, ?array $init = NULL)
   {
-    return Fetch\fetch($input, $init);
+    return Fetch\fetch($resource, $init);
   }
 }

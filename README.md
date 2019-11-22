@@ -37,12 +37,12 @@ composer require lemmon/fetch
 ## API
 
 ```php
-Fetch\Response fetch(string $input, array $init = NULL)
+Fetch\Response fetch(string $resource, array $init = NULL)
 ```
 
 ### Parameters
 
-- `$input` - a resource that you wish to fetch *(e.g. http://httpbin.org/post)*
+- `$resource` - a resource that you wish to fetch *(e.g. http://httpbin.org/post)*
 - `$init` (optional) - options array; see Guzzle's [Request Options](http://docs.guzzlephp.org/en/stable/request-options.html) documentation page for more info about available parameters; note: use additional parameter `method` to define request method; default method is GET
 
 ### Response
